@@ -42,6 +42,7 @@ def preprocess_data(df: pd.DataFrame) -> pd.DataFrame:
     )
 
     df = pd.get_dummies(df, columns=['NATIONALITY'])
+    df = pd.get_dummies(df, columns=['MACRO_BIRTH_PLACE'])
     df['GENDER'] = df.GENDER.astype('category').cat.codes
 
     return df
