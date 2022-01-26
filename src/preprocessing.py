@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 from . import config
 
@@ -161,9 +160,10 @@ def preprocess_subject_prize_level(df: pd.DataFrame) -> pd.DataFrame:
 
     return df
 
+
 def preprocess_state_exams_sum(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
-    exam_fillna_dict =(
+    exam_fillna_dict = (
         df[["START_YEAR", "ADMITTED_EXAMS_SUM"]]
         .groupby("START_YEAR")
         .median()
