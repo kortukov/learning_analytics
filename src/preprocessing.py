@@ -25,6 +25,7 @@ def preprocess_data(df: pd.DataFrame) -> pd.DataFrame:
     df = pd.get_dummies(df, columns=["SCHOLARSHIP_TYPE"], dummy_na=True)
     df = pd.get_dummies(df, columns=["DORMITORY_FOR_STUDY"], dummy_na=True)
 
+    df["AGE_AT_START"] = df["AGE_AT_START"].fillna(df["AGE_AT_START"].median())
     df["GENDER"] = df.GENDER.astype("category").cat.codes
     df["DROPPED_TARGET"] = df["DROPPED_TARGET"].apply(
         lambda x: 0 if x == 1 else (1 if x == 0 else x)
