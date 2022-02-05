@@ -126,7 +126,7 @@ Under our model we can say that with 95\% probability $\pi_o$ lies in the interv
 
 Now we test the hypothesis $\mathcal{H}_0$: \textit{"Olympiad winners have the same probability of successful graduation as students admitted under the regular procedure."}. Note, that: 1. Under the null hypothesis $\mathcal{H}_0$ we have $\pi_r = \pi_o = \pi$. The likelihood of observing $m_o$ successfully graduated olympiad winners given a particular probability $p(m_o| \pi)$ follows a binomial distribution. 2. The previously achieved Beta-posterior over $\pi$ now acts as a prior, so $ p(\pi | m_r, n_r) = \mathcal{B}(\pi;m_r+1, (n_r - m_r) + 1)$. 3. To find the probability of observing $m_o$ successfully graduated olympiad winners under the null hypothesis we marginalise over $\pi$: $p(m_o | \mathcal{H}_0) = \int p(m_o | \pi) p(\pi | m_r, n_r)\,d\pi$
 
-This results in Beta-binomial distribution\cite{hyp_testing}. It is depicted in Figure \ref{fig:test_2}.
+This results in Beta-binomial distribution \cite{hyp_testing}. It is depicted in Figure \ref{fig:test_2}.
 We compute the probability of seeing $m_o$ or more successfully graduated olympiad winners under the null hypothesis and achieve the p-value of $0.037 < 0.05$ which leads us to reject the null hypothesis.
 
 We conclude that olympiad winners and regularly admitted students have statistically significant differences in graduation probability. This warrants further study of differences in performance between students groups.
